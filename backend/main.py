@@ -14,7 +14,7 @@ import requests
 from bs4 import BeautifulSoup
 import google.generativeai as genai
 
-genai.configure(api_key="AIzaSyA-e309kfoMh4D0RHlf-1KfdUc3JIFOgN4")
+genai.configure(api_key="your api key")
 
 class UrlItem(BaseModel):
     url: str
@@ -69,4 +69,5 @@ def create_summary_endpoint(item: UrlItem):
         raise HTTPException(status_code=500, detail=str(e))
 
 if __name__ == "__main__":
+
     print_available_models()
